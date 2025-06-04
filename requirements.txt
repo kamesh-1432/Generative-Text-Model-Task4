@@ -1,1 +1,58 @@
+Libraries Used and Their Purpose:-
 
+
+Streamlit:-
+Description: A Python framework for building interactive web applications with minimal code.
+Purpose: Used to create a user-friendly web interface where users can input prompts, adjust generation parameters, and view the generated text from the GPT-2 model.
+Installation:      "pip install streamlit"
+
+
+PyTorch (torch):-
+Description: An open-source machine learning framework for building and running deep learning models.
+Purpose: Provides the backend for loading and running the fine-tuned GPT-2 model, handling tensor operations, and managing device placement (CPU/GPU).
+Installation:      "pip install torch"
+
+
+Transformers (Hugging Face):-
+Description: A library providing pre-trained models and tools for natural language processing tasks.
+Purpose: Used to load the fine-tuned GPT-2 model (GPT2LMHeadModel) and tokenizer (GPT2Tokenizer) for text generation.
+Installation:      "pip install transformers"
+
+
+Logging:-
+Description: A standard Python library for logging messages and debugging information.
+Purpose: Used to log debugging information (e.g., model loading, text generation status) to track app performance and diagnose issues.
+Installation:
+No installation required, as logging is included in Python’s standard library.
+
+
+Pyngrok:-
+Description: A Python wrapper for ngrok, a tool that creates secure public URLs for local web servers.
+Purpose: Used to expose the Streamlit app (running locally on port 8501) to a public URL, making it accessible online for testing or sharing.
+Installation:         "pip install pyngrok"
+
+
+Why These Libraries Were Chosen:-
+
+Streamlit: Simplifies web app development, providing an intuitive interface for users to input prompts and view generated text.
+PyTorch: Offers efficient handling of deep learning models like GPT-2, with support for GPU acceleration for faster inference.
+Transformers: Provides easy access to the fine-tuned GPT-2 model and tokenizer, streamlining text generation tasks.
+Logging: Enables debugging and monitoring of the app’s operations, ensuring reliability during model loading and text generation.
+Pyngrok: Facilitates sharing the local Streamlit app via a public URL, ideal for testing or demo purposes.
+
+
+Installation Steps:-
+To set up the environment for the AI Text Generator App, run the following commands in your terminal or command prompt:
+
+pip install streamlit
+pip install torch
+pip install transformers
+pip install pyngrok
+
+Note: Ensure you have Python installed (version 3.7 or higher recommended). The logging library is part of Python’s standard library and requires no additional installation. 
+For PyTorch, you may need to install a specific version compatible with your system (e.g., CPU or GPU support); 
+check PyTorch’s official website for details. The fine-tuned GPT-2 model and tokenizer must be available at the specified model_path (e.g., /content/drive/MyDrive/Generative-Text-Model/fine_tuned_model). 
+An ngrok authentication token is required for pyngrok; obtain it from ngrok.com. 
+Ensure app.py exists in the specified directory before running the app.
+
+These libraries and installation steps enable the creation, deployment, and accessibility of a functional AI text generation web app using a fine-tuned GPT-2 model.
